@@ -169,20 +169,10 @@ echo "/home/user/sm/Spacemesh-$VERSION.AppImage --no-sandbox" > sui
 chmod +x  $DIR/sui
 
 
-echo -n "#### INSTALLING WALLP  ####"
-
-echo "echo -n gantumrakBalakriNima1076 | xclip" > wallp
-chmod +x  $DIR/wallp
-
-
 echo -n "#### CREATING SYMBOLIC LINK FOR SUI  ####"
 
 cd
 ln -s  $DIR/sm/sui
-
-
-
-
 
 
 # end denis
