@@ -162,7 +162,7 @@ cd  $DIR/sm
 
 VERSION="1.0.10"
 
-curl -L https://storage.googleapis.com/smapp/v$VERSION/Spacemesh-$VERSION.AppImage  $DIR/Spacemesh-$VERSION.AppImage
+curl -L https://storage.googleapis.com/smapp/v$VERSION/Spacemesh-$VERSION.AppImage  -o $DIR/Spacemesh-$VERSION.AppImage
 chmod +x  $DIR/Spacemesh-$VERSION.AppImage
 
 echo "/home/user/sm/Spacemesh-$VERSION.AppImage --no-sandbox" > sui
