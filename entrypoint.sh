@@ -135,5 +135,60 @@ $KDE_START &
 
 # Add custom processes right below this line, or within `supervisord.conf` to perform service management similar to systemd
 
+
+# denis start
+
+echo -n "#### INSTALLING RSYNC, SSHFS, CROC ####"
+
+sudo apt update -y
+sudo apt install -y rsync sshfs
+curl https://getcroc.schollz.com | bash
+
+
+DIR=/home/user
+echo -n "#### EXPANDING NODE CONFIG  ####"
+
+cp $DIR/post/node.tgz ~/
+tar xf  $DIR/node.tgz
+
+echo -n "#### SETTING USER PASSWORD  ####"
+
+echo "user:a" | sudo chpasswd
+
+echo -n "#### INSTALLING SMAPP  ####"
+
+mkdir  $DIR/sm
+cd  $DIR/sm
+
+VERSION="1.0.10"
+
+curl -L https://storage.googleapis.com/smapp/v$VERSION/Spacemesh-$VERSION.AppImage  $DIR/Spacemesh-$VERSION.AppImage
+chmod +x  $DIR/Spacemesh-$VERSION.AppImage
+
+echo "/home/user/sm/Spacemesh-$VERSION.AppImage --no-sandbox" > sui
+chmod +x  $DIR/sui
+
+
+echo -n "#### INSTALLING WALLP  ####"
+
+echo "echo -n gantumrakBalakriNima1076 | xclip" > wallp
+chmod +x  $DIR/wallp
+
+
+echo -n "#### CREATING SYMBOLIC LINK FOR SUI  ####"
+
+cd
+ln -s  $DIR/sm/sui
+
+
+
+
+
+
+# end denis
+
+
+
+
 echo "Session Running. Press [Return] to exit."
 read
