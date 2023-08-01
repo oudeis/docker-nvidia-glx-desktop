@@ -10,7 +10,7 @@ on:
     branches: [ main ]
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: oudeis/nvidia-glx-desktop
+  IMAGE_NAME: oudeis/test
 jobs:
   build-jammy:
     runs-on: ubuntu-latest

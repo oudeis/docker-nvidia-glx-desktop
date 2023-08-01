@@ -136,7 +136,7 @@ $KDE_START &
 # Add custom processes right below this line, or within `supervisord.conf` to perform service management similar to systemd
 
 
-# denis start
+# ================================================================================
 
 echo -n "#### INSTALLING RSYNC, SSHFS, CROC ####"
 
@@ -174,8 +174,6 @@ echo -n "#### CREATING SYMBOLIC LINK FOR SUI  ####"
 cd
 ln -s  $DIR/sm/sui
 
-
-# end denis
 
 
 
