@@ -136,7 +136,7 @@ $KDE_START &
 # Add custom processes right below this line, or within `supervisord.conf` to perform service management similar to systemd
 
 
-# ================================================================================
+################################################################################
 
 echo -n "#### INSTALLING RSYNC, SSHFS, CROC ####"
 
@@ -176,7 +176,15 @@ ln -s  $DIR/sm/sui
 
 
 
+kwriteconfig5 --file kscreensaverrc --group Daemon --key Autolock false
+
+
+################################################################################
+
+
 
 
 echo "Session Running. Press [Return] to exit."
 read
+
+
